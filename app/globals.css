@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.workout-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.timer-section {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border-radius: 15px;
+  color: white;
+}
+
+.timer {
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 20px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.exercise-name {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.exercise-reps {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.exercise-list {
+  margin-top: 30px;
+}
+
+.exercise-item {
+  padding: 20px;
+  margin-bottom: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 5px solid #667eea;
+  transition: all 0.3s;
+}
+
+.exercise-item.active {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  border-left-width: 8px;
+  transform: scale(1.02);
+}
+
+.exercise-item.completed {
+  opacity: 0.6;
+  border-left-color: #28a745;
+}
+
+.exercise-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.exercise-item p {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.exercise-item .time {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+.info-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.info-section h3 {
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.info-section ul {
+  list-style-position: inside;
+  line-height: 1.8;
+}
+
+.info-section li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.status-rest {
+  background: #17a2b8;
+  color: white;
+}
+
+.status-work {
+  background: #28a745;
+  color: white;
+}
+
+.completion-message {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  border-radius: 15px;
+  color: white;
+}
+
+.completion-message h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.completion-message p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .timer {
+    font-size: 3rem;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
